@@ -11,7 +11,6 @@ class Login extends CI_controller{
 
 	// dump function
 	public function index(){
-
 		$user_id = $this->session->userdata('user_id');
 
 		// check if the session is expire
@@ -23,7 +22,8 @@ class Login extends CI_controller{
 			);
 			$this->load->view('login/login',$data);
 		}else{
-			redirect('base');
+
+			redirect('/base','refresh');
 		}
 		
 	}
@@ -43,7 +43,8 @@ class Login extends CI_controller{
 			$this->load->view('login/register',$data);
 
 		}else{
-			redirect('base');
+			// redirect('base');
+			redirect('base', 'refresh');
 		}
 		
 	}

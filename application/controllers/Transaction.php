@@ -18,7 +18,7 @@ class Transaction extends CI_controller{
 
 		if // check if the sessions are expire
 		(
-			(!$this->session_checker->is_session_exist($user_id)) ||  
+			(!$this->session_checker->is_session_exist($user_id)) &&  
 			(!$this->session_checker->is_session_exist($group_type))
 		){ 
 			// redirect('error.html');
@@ -46,7 +46,7 @@ class Transaction extends CI_controller{
 		
 		if // check if the sessions are expire
 		(
-			(!$this->session_checker->is_session_exist($user_id)) ||  
+			(!$this->session_checker->is_session_exist($user_id)) &&
 			(!$this->session_checker->is_session_exist($group_type))
 		){ 
 			// redirect('error.html');
@@ -74,7 +74,7 @@ class Transaction extends CI_controller{
 		
 		if // check if the sessions are expire
 		(
-			(!$this->session_checker->is_session_exist($user_id)) ||  
+			(!$this->session_checker->is_session_exist($user_id)) &&
 			(!$this->session_checker->is_session_exist($group_type))
 		){ 
 			// redirect('error.html');
