@@ -22,14 +22,30 @@
 
     <!-- Custom styles for this template-->
     <link href="<?php echo $base_url ?>assets/css/sb-admin.css" rel="stylesheet">
+    <link href="<?php echo $base_url ?>assets/css/datepicker.css" rel="stylesheet">
 
     <script src="<?php echo $base_url ?>assets/js/jquery.js" type="text/javascript"></script>
     <script src="<?php echo $base_url ?>assets/js/base.js" type="text/javascript"></script>
+    <!-- <script src="<?php echo $base_url ?>assets/js/bootstrap-datepicker.js" type="text/javascript"></script> -->
+    <script src="<?php echo $base_url ?>assets/js/bootstrap-datepicker.js"></script>
 
+    
     <script type="text/javascript">
       var base_url = '<?php echo $base_url ?>';
       var site_url = '<?php echo $site_url ?>';
     </script>
+
+    <link rel="stylesheet" href="<?php echo $base_url ?>assets/css/datepicker/jquery-ui.css">
+
+    <script src="jquery-1.12.4.js" src="<?php echo $base_url ?>assets/js/datepicker/jquery-1.12.4.js"></script>
+    <script src="jquery-1.12.4.js" src="<?php echo $base_url ?>assets/js/datepicker/jquery-ui.js"></script>
+      <script>
+        $( function() {
+          $( "#datepicker" ).datepicker();
+        } );
+      </script>
+
+
   </head>
 
   <body id="page-top">

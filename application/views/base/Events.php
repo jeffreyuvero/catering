@@ -135,10 +135,24 @@
                           <span class="input-group-addon"></span>
                           <span class="glyphicon glyphicon-calendar"></span>
                       </div> -->
-                      <div class="inpu-append date" id="pd3" data-date="12-02-2012" data-date-format ="dd-mm-yyyy">
+                      <!-- <div class="inpu-append date" id="pd3" data-date="12-02-2012" data-date-format ="dd-mm-yyyy">
                         <input type="text" class="span2" value="12-02-2012" >
                         <span class="add-on"><i class="icon-th"></i></span>
-                      </div>
+                      </div> -->
+
+                     <input type="text" id="datepicker">
+                    <!--   <div class="docs-datepicker">
+                       <div class="input-group">
+                         <input type="text" class="form-control docs-date" name="date" placeholder="Pick a date">
+                         <div class="input-group-append">
+                           <button type="button" class="btn btn-outline-secondary docs-datepicker-trigger" disabled>
+                             <i class="fa fa-calendar" aria-hidden="true"></i>
+                           </button>
+                         </div>
+                       </div></div>
+
+ -->
+
                     </div>
                   </div>
               </div>

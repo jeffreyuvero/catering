@@ -77,11 +77,18 @@
               <div class="container">
                   <div class="row">
                     <div class="col-sm-6">
-                      <div class="input-group-date" id="datetimepicker5">
+                     <!--  <div class="input-group-date" id="datetimepicker5">
                         <input type="text" class="form-control" name="" />
                           <span class="input-group-addon"></span>
                           <span class="glyphicon glyphicon-calendar"></span>
-                      </div>
+                      </div> -->
+                      <!-- <input class="span2" value="02/16/12" data-date-format="mm/dd/yy" id="dp2" type="text"> -->
+                      <!-- <div class="well">
+                        <input type="text" class="span2" value="02/16/12" data-date-format="mm/dd/yy" id="dp2" >
+                      </div> -->
+                      <div class="well">
+                         <input type="text" class="span2" value="" id="dp1" >
+                       </div>
                     </div>
                   </div>
               </div>
