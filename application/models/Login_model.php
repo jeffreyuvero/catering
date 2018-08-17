@@ -68,12 +68,11 @@ class Login_model extends CI_model{
 	}
 
 	public function get_user_grp($email){
-
 		$this->db->where('email',$email);
 		$query = $this->db->get('user');
 		$user_id = $query->row_array()['id'];
 
-		$this->db->where('id',$user_id);
+		$this->db->where('user_id',$user_id);
 		$group = $this->db->get('user_group');
 		$group_id = $group->row_array()['group_id'];
 
