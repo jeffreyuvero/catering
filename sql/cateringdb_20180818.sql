@@ -2,7 +2,7 @@ CREATE DATABASE  IF NOT EXISTS `catering` /*!40100 DEFAULT CHARACTER SET latin1 
 USE `catering`;
 -- MySQL dump 10.13  Distrib 5.6.13, for Win32 (x86)
 --
--- Host: localhost    Database: catering
+-- Host: 127.0.0.1    Database: catering
 -- ------------------------------------------------------
 -- Server version	5.6.25
 
@@ -81,7 +81,7 @@ CREATE TABLE `registration` (
   `last_name` varchar(45) DEFAULT NULL,
   `contact_num` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1 COMMENT='it contained the basic information of the user';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1 COMMENT='it contained the basic information of the user';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -90,7 +90,7 @@ CREATE TABLE `registration` (
 
 LOCK TABLES `registration` WRITE;
 /*!40000 ALTER TABLE `registration` DISABLE KEYS */;
-INSERT INTO `registration` VALUES (13,13,'Jeffrey',NULL,'Uvero',NULL);
+INSERT INTO `registration` VALUES (1,1,'system',NULL,'administrator',NULL);
 /*!40000 ALTER TABLE `registration` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -136,7 +136,7 @@ CREATE TABLE `user` (
   `date_register` date DEFAULT NULL,
   `time_register` time DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1 COMMENT='it contained the security information of the user (e,g username and password)';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1 COMMENT='it contained the security information of the user (e,g username and password)';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -145,7 +145,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (13,NULL,'$2y$10$U72lIg2JYNMvF9KGd2M4mucigvbzPzrxqY3BNns1WSgrpgjRrnXxC','admin@admin.com',0,'2018-08-14','15:20:45');
+INSERT INTO `user` VALUES (1,NULL,'$2y$10$vh9GT0OhnVtrHKcIAgPIIOWwT84jrABk6HhlgH1Cyi2af8i70wPyC','admin@admin.com',0,'2018-08-18','02:27:42');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -161,7 +161,7 @@ CREATE TABLE `user_group` (
   `group_id` int(11) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='this table containes the relation of the user table and the group table. it will determine the group of the user. ';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1 COMMENT='this table containes the relation of the user table and the group table. it will determine the group of the user. ';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -170,6 +170,7 @@ CREATE TABLE `user_group` (
 
 LOCK TABLES `user_group` WRITE;
 /*!40000 ALTER TABLE `user_group` DISABLE KEYS */;
+INSERT INTO `user_group` VALUES (1,2,1);
 /*!40000 ALTER TABLE `user_group` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -182,4 +183,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-08-16 22:28:30
+-- Dump completed on 2018-08-18  8:31:50
