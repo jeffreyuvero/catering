@@ -8,41 +8,52 @@ $(document).ready(function(){
 		});
 		
 		var date = $('#pd3 > input').val();
-		// $.ajax({
-		// 	url: site_url + '/transaction/event_submit',
-		// 	type: 'POST',
-		// 	data: {
-		// 		event:event,
-		// 		addons:addons,
-		// 		date:date
-		// 	},
-		// 	dataType:'JSON',
-		// 	success:function(result){
-		// 		alert(result);
-		// 	},error:function(result){
-		// 		alert('errror');
-		// 	}
-		// });
-
 
 		$.ajax({
-		url: site_url + '/transaction/event_submit',
-		data: {
-	  		event:event,
-			addons:addons,
-			date:date
-		},
-		dataType:'json',
-		success:function(data) {
-		   if(data)
-		    {
-		        alert(data.add);
-		    }
-		},
-		error:function(data){
-		    alert('error');
-		},
-		method: 'POST',
+			url: site_url + '/transaction/event_submit',
+			data: {
+		  		event:event,
+				addons:addons,
+				date:date
+			},
+			dataType:'json',
+			success:function(data) {
+			   if(data.success)
+			    {
+			        alert('transaction success saved');
+			        window.location = site_url + '/packages'; 
+			    }
+			},
+			error:function(data){
+			    alert('error');
+			},
+			method: 'POST',
 		});
+	});
+
+	$('.btn-proceed-package').click(function(){
+		var selected_package = $('input[name=rdoPackage]:checked').attr('value');
+
+		if(!selected_package){
+			alert('select package before we proceed');
+		}else {
+			$.ajax({
+				url: site_url + '/packages/add',
+				data: {
+					package: selected_package,
+				},
+				dataType: 'json',
+				method: 'POST',
+				success:function(data) {
+				   if(data.success)
+				    {
+				        alert('transaction success saved');
+				        window.location = site_url + '/order_summary'; 
+				    }
+				},error:function(data){
+					alert('error');
+				}
+			});
+		}
 	});
 });

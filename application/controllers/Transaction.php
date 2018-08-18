@@ -101,9 +101,15 @@ class Transaction extends CI_controller{
 		$date = $this->input->post('date');
 		$time = "";
 
-		$add_trans = $this->transaction_model->add_transaction($user_id,$event,$addons,$date,$time);
+		$trans_id = $this->transaction_model->add_transaction($user_id,$event,$addons,$date,$time);
+		$this->session->set_userdata('transaction_id',$trans_id);
 
-		$alert = array('add' => $add_trans, 'status_message' => 'Verification code is sucessfully send to your email, please check'); 
-        echo json_encode($alert);
+		if($trans_id){
+			$alert = array('success' => 1); 
+	        echo json_encode($alert);
+		}else{
+			$error = array('error' => 'Error in database'); 
+	        echo json_encode($error);
+		}
 	}
 }
