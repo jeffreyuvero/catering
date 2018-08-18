@@ -42,7 +42,6 @@ class Transaction_model extends CI_model{
 			user.email,
 			registration.first_name,
 			registration.last_name,
-			addons.addons,
 			transaction.event,
 			transaction.date,
 			package.idpackage_list,
@@ -51,13 +50,30 @@ class Transaction_model extends CI_model{
 		$this->db->from('user');
 		$this->db->join('registration','user.id = registration.iduser','left');
 		$this->db->join('transaction','user.id = transaction.iduser','left');
-		$this->db->join('addons','transaction.id = addons.idtrans','left');
 		$this->db->join('package','package.idtrans = transaction.id','left');
 		$this->db->where('user.id',$user_id);
 		$this->db->where('package.id',$package_id);
 		$query = $this->db->get();
-		return $query->result_array();
+		return $query->row_array();
 
-		return $this->db->last_query();
+		// return $this->db->last_query();
+	}
+
+	public function get_addons_value($transaction_id){	
+		$this->db->select('addons.id,addons_list.addons_list,addons_list.price');
+		$this->db->from('addons');
+		$this->db->join('addons_list','addons_list.id = addons.idaddons_list','left');
+		$this->db->where('addons.idtrans',$transaction_id);
+		$query = $this->db->get();
+		return $query->result_array();
+	}
+
+	public function get_selected_package($transaction_id){
+		$this->db->select('package.idpackage_list,package_list.package,package_list.price');
+		$this->db->from('package');
+		$this->db->join('package_list','package_list.id = package.idpackage_list','left');
+		$this->db->where('package.idtrans',$transaction_id);
+		$query = $this->db->get();
+		return $query->row_array();
 	}
 }

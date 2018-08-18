@@ -7,28 +7,35 @@ $(document).ready(function(){
 			addons.push($(this).attr('name'))
 		});
 		
-		var date = $('#pd3 > input').val();
+		var date = $('#datepicker').val();
 
-		$.ajax({
-			url: site_url + '/transaction/event_submit',
-			data: {
-		  		event:event,
-				addons:addons,
-				date:date
-			},
-			dataType:'json',
-			success:function(data) {
-			   if(data.success)
-			    {
-			        alert('transaction success saved');
-			        window.location = site_url + '/packages'; 
-			    }
-			},
-			error:function(data){
-			    alert('error');
-			},
-			method: 'POST',
-		});
+		if(!event){
+			alert('Please select an Event you want');
+		}
+		else if(!date){
+			alert('Please select an date');
+		}else{
+			$.ajax({
+				url: site_url + '/transaction/event_submit',
+				data: {
+			  		event:event,
+					addons:addons,
+					date:date
+				},
+				dataType:'json',
+				success:function(data) {
+				   if(data.success)
+				    {
+				        alert('transaction success saved');
+				        window.location = site_url + '/packages'; 
+				    }
+				},
+				error:function(data){
+				    alert('error');
+				},
+				method: 'POST',
+			});
+		}
 	});
 
 	$('.btn-proceed-package').click(function(){

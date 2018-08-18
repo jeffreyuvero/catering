@@ -24,6 +24,9 @@
                 <h4>
                   <i>Summary of your Order</i>
                 </h4>
+                <p>
+                  <i style="color: red"> Please check your item before you proceed! </i>
+                </p>
             </div>
             <div class="card-body">
               <div class="container">
@@ -44,14 +47,22 @@
                         <label class="col-sm-2">
                           Name: 
                         </label>
-                        <p class="col-sm-2">Jeffrey </p>
+                        <p class="col-sm-2">
+                          <strong>
+                            <?php echo $order_summary['last_name'] .', '. $order_summary['first_name']  ?>
+                          </strong> 
+                        </p>
                       </div>
 
                       <div class="row">
                         <label class="col-sm-2">
                           Email: 
                         </label>
-                        <p class="col-sm-2">Jeffrey@asd.d</p>
+                        <p class="col-sm-2">
+                          <strong>
+                            <?php echo $order_summary['email'] ?>
+                          </strong>
+                        </p>
                       </div>
                     </div>
                 </div>
@@ -73,29 +84,34 @@
                         <label class="col-sm-4">
                           Events: 
                         </label>
-                        <p class="col-sm-2">Birthday</p>
+                        <p class="col-sm-2">
+                          <strong>
+                            <?php echo $order_summary['event'] ?>
+                          </strong>
+                        </p>
                       </div>
+
+                      <label class="col-sm-4">
+                        Add ons (if any): 
+                      </label>
+                      <?php foreach ($addons as $key => $item) { ?>
+                        <div class="row">
+                          <label class="col-sm-4"> <strong>Item:</strong> </label>
+                          <p class="col-sm-2"><?php echo $item['addons_list'] ?></p>
+                          <label class="col-sm-4"> <strong>Price:</strong> </label>
+                          <p class="col-sm-2"><?php echo $item['price'] ?></p>
+                        </div>
+                      <?php  } ?> 
 
                       <div class="row">
                         <label class="col-sm-4">
-                          Add ons (if any): 
+                          <strong>Selected Package</strong> 
                         </label>
-                        <p class="col-sm-2">ALL</p>
+                        <p class="col-sm-2"><?php echo $package['package']; ?></p>
                         <label class="col-sm-4">
                           Price: 
                         </label>
-                        <p class="col-sm-2">P 102</p>
-                      </div>
-
-                      <div class="row">
-                        <label class="col-sm-4">
-                          Selected Package 
-                        </label>
-                        <p class="col-sm-2">Package 102 </p>
-                        <label class="col-sm-4">
-                          Price: 
-                        </label>
-                        <p class="col-sm-2">P 102</p>
+                        <p class="col-sm-2"><?php echo $package['price']; ?></p>
                       </div>
                     </div>
                   

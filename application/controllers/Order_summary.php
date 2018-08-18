@@ -27,11 +27,17 @@ class Order_summary extends CI_controller{
 		$transaction_id = $this->session->userdata('transaction_id');
 
 		$get_order = $this->transaction_model->get_order_summary($user_id,$package_id);
+		$addons = $this->transaction_model->get_addons_value($transaction_id);
+		$selected_package = $this->transaction_model->get_selected_package($transaction_id);
+
 		$data = array(
 			'base_url' => base_url(),
 			'site_url' => site_url(),
 			'title' => 'Catering Online', 
-			'group_type' => $group_type, 
+			'group_type' => $group_type,
+			'order_summary' => $get_order,
+			'addons' => $addons,
+			'package' => $selected_package,
 		);
 
 		$this->load->view('base/include/header',$data);
