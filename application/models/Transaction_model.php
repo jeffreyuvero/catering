@@ -76,4 +76,8 @@ class Transaction_model extends CI_model{
 		$query = $this->db->get();
 		return $query->row_array();
 	}
+
+	public function get_billing(){
+	
+	}
 }
