@@ -18,8 +18,8 @@ class Transaction_model extends CI_model{
 		$transaction_id = $this->db->insert_id();
 		foreach ($addons as $key => $addon) {
 			$addon = array(
-				'idtrans' => $this->db->insert_id(),
-				'addons' => $addon  
+				'idtrans' => $transaction_id,
+				'idaddons_list' => $addon  
 			);
 			$this->db->insert('addons',$addon);
 		}

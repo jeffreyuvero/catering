@@ -15,6 +15,7 @@ class Transaction extends CI_controller{
 	public function index(){
 		$user_id = $this->session->userdata('user_id');
 		$group_type = $this->session->userdata('group_type');
+		$this->session->unset_userdata('transaction_id');
 
 		if // check if the sessions are expire
 		(
@@ -42,7 +43,7 @@ class Transaction extends CI_controller{
 	public function events(){
 		$user_id = $this->session->userdata('user_id');
 		$group_type = $this->session->userdata('group_type');
-
+		
 		
 		if // check if the sessions are expire
 		(
@@ -102,6 +103,7 @@ class Transaction extends CI_controller{
 		$time = "";
 
 		$trans_id = $this->transaction_model->add_transaction($user_id,$event,$addons,$date,$time);
+
 		$this->session->set_userdata('transaction_id',$trans_id);
 
 		if($trans_id){

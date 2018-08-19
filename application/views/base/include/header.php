@@ -17,6 +17,9 @@
     <!-- Custom fonts for this template-->
     <link href="<?php echo $base_url ?>assets/font/all.min.css" rel="stylesheet" type="text/css">
 
+    <!-- Custom CSS for base -->
+    <link href="<?php echo $base_url ?>assets/css/base.css" rel="stylesheet">
+
     <!-- Page level plugin CSS-->
     <!-- <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet"> -->
 
@@ -37,8 +40,8 @@
 
     <link rel="stylesheet" href="<?php echo $base_url ?>assets/css/datepicker/jquery-ui.css">
 
-    <script src="jquery-1.12.4.js" src="<?php echo $base_url ?>assets/js/datepicker/jquery-1.12.4.js"></script>
-    <script src="jquery-1.12.4.js" src="<?php echo $base_url ?>assets/js/datepicker/jquery-ui.js"></script>
+    <script  src="<?php echo $base_url ?>assets/js/datepicker/jquery-1.12.4.js"></script>
+    <script  src="<?php echo $base_url ?>assets/js/datepicker/jquery-ui.js"></script>
       <script>
         $( function() {
           $( "#datepicker" ).datepicker();

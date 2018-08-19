@@ -4,15 +4,14 @@ $(document).ready(function(){
 
 		var addons = []; 
 		$('input[type=checkbox]:checked').each(function(){
-			addons.push($(this).attr('name'))
+			addons.push($(this).attr('value'))
 		});
 		
 		var date = $('#datepicker').val();
 
 		if(!event){
 			alert('Please select an Event you want');
-		}
-		else if(!date){
+		}else if(!date){
 			alert('Please select an date');
 		}else{
 			$.ajax({

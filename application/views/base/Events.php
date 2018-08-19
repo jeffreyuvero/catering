@@ -82,21 +82,21 @@
               <hr />
               <div class="card-text">
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" name="videoke">
+                    <input type="checkbox" class="form-check-input" name="videoke" value="3">
                     Videoke
                   </div>
               </div>
 
               <div class="card-text">
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" name="photobooth">
+                  <input type="checkbox" class="form-check-input" name="photobooth" value="1">
                   Photobooth
                 </div>
               </div>
 
               <div class="card-text">
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" name="chairtable"> 
+                  <input type="checkbox" class="form-check-input" name="chairtable" value="2"> 
                   Chair and Table
                 </div>
               </div>

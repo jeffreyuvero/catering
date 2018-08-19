@@ -44,7 +44,7 @@
                     </div>
                     <div class="container">
                       <div class="row">
-                        <label class="col-sm-2">
+                        <label class="col-sm-2 summary_label">
                           Name: 
                         </label>
                         <p class="col-sm-2">

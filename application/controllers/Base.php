@@ -39,6 +39,7 @@ class Base extends CI_controller{
 		$user_id = $this->session->userdata('user_id');
 		$this->session->unset_userdata('user_id');
 		$this->session->unset_userdata('group_type');
+		$this->session->unset_userdata('transaction_id');
 		redirect('login');		
 	}
 }
