@@ -41,6 +41,7 @@ class Packages extends CI_controller{
 	public function add(){
 		$user_id = $this->session->userdata('user_id');
 		$group_type = $this->session->userdata('group_type');
+		$date = $this->input->post('date');
 
 		if // check if the sessions are expire
 		(
@@ -54,7 +55,7 @@ class Packages extends CI_controller{
 		$package = $this->input->post('package');
 		$transaction_id = $this->session->userdata('transaction_id');
 
-		$package_id = $this->transaction_model->add_package($user_id,$transaction_id,$package);
+		$package_id = $this->transaction_model->add_package($user_id,$transaction_id,$package,$date);
 		$this->session->set_userdata('package_id',$package_id);
 
 		if($package_id){
@@ -64,6 +65,5 @@ class Packages extends CI_controller{
 			$error = array('error' => 'Error in database'); 
 	        echo json_encode($error);
 		}
-
 	}
 }

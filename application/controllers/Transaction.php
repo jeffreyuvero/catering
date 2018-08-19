@@ -95,14 +95,34 @@ class Transaction extends CI_controller{
 		$this->load->view('base/include/footer',$data);	
 	}
 
+	// public function catering(){
+	// 	$user_id = $this->session->userdata('user_id');
+	// 	$event = "";
+	// 	$addons = "";
+	// 	$time = "";
+
+	// 	$trans_id = $this->transaction_model->add_transaction($user_id,$event,$addons,$time);
+
+	// 	$this->session->set_userdata('transaction_id',$trans_id);
+
+	// 	if($trans_id){
+	// 		$alert = array('success' => 1); 
+	//         echo json_encode($alert);
+	// 	}else{
+	// 		$error = array('error' => 'Error in database'); 
+	//         echo json_encode($error);
+	// 	}
+	// }
+
 	public function event_submit(){
 		$user_id = $this->session->userdata('user_id');
 		$event = $this->input->post('event');
 		$addons = $this->input->post('addons');
-		$date = $this->input->post('date');
 		$time = "";
 
-		$trans_id = $this->transaction_model->add_transaction($user_id,$event,$addons,$date,$time);
+		$trans_id = $this->transaction_model->add_transaction($user_id,$event,$addons,$time);
+
+		// print_r($trans_id); die();
 
 		$this->session->set_userdata('transaction_id',$trans_id);
 

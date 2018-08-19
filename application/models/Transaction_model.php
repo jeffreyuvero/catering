@@ -5,28 +5,35 @@ class Transaction_model extends CI_model{
 		parent::__construct();
 	}
 
-	public function add_transaction($user_id,$event,$addons,$date,$time){
+	public function add_transaction($user_id,$event,$addons,$time){
 
 		$add_tran = array(
 			'iduser' => $user_id,
 			'event' => $event,
-			'date' => $date,
+			// 'date' => $date,
 			'time' => $time, 
 		);
 		$this->db->insert('transaction',$add_tran);
 
 		$transaction_id = $this->db->insert_id();
-		foreach ($addons as $key => $addon) {
-			$addon = array(
-				'idtrans' => $transaction_id,
-				'idaddons_list' => $addon  
-			);
-			$this->db->insert('addons',$addon);
+		if($addons){
+			foreach ($addons as $key => $addon) {
+				$addon = array(
+					'idtrans' => $transaction_id,
+					'idaddons_list' => $addon  
+				);
+				$this->db->insert('addons',$addon);
+			}
 		}
 		return $transaction_id;
 	}
 
-	public function add_package($user_id,$transaction_id,$package_id){
+	public function add_package($user_id,$transaction_id,$package_id,$date){
+
+		$this->db->where('id',$transaction_id);
+		$this->db->set('date',$date);
+		$this->db->update('transaction');
+
 		$add_package = array(
 			'iduser' => $user_id,
 			'idtrans' => $transaction_id,

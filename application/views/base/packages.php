@@ -15,10 +15,63 @@
 
     <h1>Events</h1>
     <hr>
+       <div class="row">
+         <div class="col-sm-2">
+             
+         </div>
+
+         <div class="col-sm-8">
+             <div class="card">
+               <div class="card-body">
+                 <div class="card-title">
+                   <h2>Set the date</h2>
+                 </div>
+                 <hr />
+                 <div class="container">
+                     <div class="row">
+                       <div class="col-sm-6">
+                         <!-- <div class="input-group-date" id="datetimepicker5">
+                           <input type="text" class="form-control" name="" />
+                             <span class="input-group-addon"></span>
+                             <span class="glyphicon glyphicon-calendar"></span>
+                         </div> -->
+                         <!-- <div class="inpu-append date" id="pd3" data-date="12-02-2012" data-date-format ="dd-mm-yyyy">
+                           <input type="text" class="span2" value="12-02-2012" >
+                           <span class="add-on"><i class="icon-th"></i></span>
+                         </div> -->
+
+                        <input type="text" id="datepicker">
+                       <!--   <div class="docs-datepicker">
+                          <div class="input-group">
+                            <input type="text" class="form-control docs-date" name="date" placeholder="Pick a date">
+                            <div class="input-group-append">
+                              <button type="button" class="btn btn-outline-secondary docs-datepicker-trigger" disabled>
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                              </button>
+                            </div>
+                          </div></div>
+
+    -->
+
+                       </div>
+                     </div>
+                 </div>
+               </div>  
+             </div>
+         </div>
+
+         <div class="col-sm-2">
+                   
+         </div>
+
+         <div class="col-sm-1">
+         </div>
+       </div>
+
       <div class="row">
         <div class="col-sm-2"> </div>
-
-        <div class="col-sm-4">
+ 
+       <div class="col-sm-4">
           <div class="card border-light mb-3 style="max-width: 18rem;">
             <div class="card-header">
                 <h4>
