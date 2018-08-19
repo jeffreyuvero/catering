@@ -36,7 +36,6 @@ $(document).ready(function(){
 			});
 		}
 	});
-
 	$('.btn-proceed-package').click(function(){
 		var selected_package = $('input[name=rdoPackage]:checked').attr('value');
 
@@ -62,4 +61,10 @@ $(document).ready(function(){
 			});
 		}
 	});
+
+	$('.btn-proceed-order').click(function(){
+		window.location = site_url + '/billing_statement';
+	});
+
+	
 });

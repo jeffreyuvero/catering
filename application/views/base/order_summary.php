@@ -134,7 +134,7 @@
                   <div class="container">
                       <div class="row">
                           <div class="col-sm-6">
-                              <button class="btn btn-primary btn-proceed-package">
+                              <button class="btn btn-primary btn-proceed-order">
                                 Proceed
                               </button>
                           </div>
