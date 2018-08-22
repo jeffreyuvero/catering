@@ -63,6 +63,18 @@
     <!-- Custom scripts for all pages-->
     <script src="<?php echo $base_url ?>assets/js/sb-admin.min.js"></script>
 
+
+    <!-- datepicker -->
+
+    <script src="<?php echo $base_url ?>assets/js/jquery-ui.js"></script>
+    <script>
+      $( function() {
+         $( "#datepicker" ).datepicker();
+      } );
+    </script>
+
+
+
   </body>
 
 </html>

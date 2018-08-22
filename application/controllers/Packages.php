@@ -24,7 +24,6 @@ class Packages extends CI_controller{
 			redirect('login');
 		}
 			
-		 
 
 		$data = array(
 			'base_url' => base_url(),

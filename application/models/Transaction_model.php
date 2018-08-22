@@ -30,6 +30,8 @@ class Transaction_model extends CI_model{
 
 	public function add_package($user_id,$transaction_id,$package_id,$date){
 
+		$date = date("Y-m-d",strtotime($date));
+
 		$this->db->where('id',$transaction_id);
 		$this->db->set('date',$date);
 		$this->db->update('transaction');
