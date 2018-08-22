@@ -94,4 +94,13 @@ class Transaction_model extends CI_model{
 		$this->db->insert('records',$records);
 		return $this->db->affected_rows();
 	}
+
+	public function get_transactions_user($user_id){
+		$this->db->select('*');
+		$this->db->from('records');
+		$this->db->join('transaction','records.idtrans = transaction.id','left');
+		$this->db->where('transaction.iduser',$user_id);
+		$query = $this->db->get();
+		return $query->result_array();
+	}
 }

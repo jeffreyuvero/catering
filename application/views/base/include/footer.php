@@ -37,12 +37,28 @@
       </div>
     </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="<?php echo $base_url ?>assets/js/jquery.min.js"></script>
+
+    <script src="<?php echo $base_url ?>assets/js/jquery.js" type="text/javascript"></script>
+     <!-- Page level plugin JavaScript-->
+    <script src="<?php echo $base_url ?>assets/js/jquery.dataTables.js"></script>
+    <script src="<?php echo $base_url ?>assets/js/datepickertaTables.bootstrap4.js"></script>
+    <!-- Demo scripts for this page-->
+    <script src="<?php echo $base_url ?>assets/js/datatables-demo.js"></script>
+
+     <script src="<?php echo $base_url ?>assets/js/base.js" type="text/javascript"></script>
+    <script src="<?php echo $base_url ?>assets/js/bootstrap-datepicker.js" type="text/javascript"></script>
+    <script src="<?php echo $base_url ?>assets/js/bootstrap-datepicker.js"></script>
+
+    
+    <script type="text/javascript">
+      var base_url = '<?php echo $base_url ?>';
+      var site_url = '<?php echo $site_url ?>';
+    </script>
+
     <script src="<?php echo $base_url ?>assets/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="<?php echo $base_url ?>assets/js/jquery.easing.min.js"></script>
+    <!-- <script src="<?php echo $base_url ?>assets/js/jquery.easing.min.js"></script> -->
 
     <!-- Custom scripts for all pages-->
     <script src="<?php echo $base_url ?>assets/js/sb-admin.min.js"></script>

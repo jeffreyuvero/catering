@@ -28,6 +28,12 @@
       } else {
     ?>
     <li class="nav-item">
+      <a class="nav-link" href="<?php echo $site_url ?>">
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>Dashboard</span>
+      </a>
+    </li>
+    <li class="nav-item">
       <a class="nav-link" href="<?php echo $site_url ?>/transaction">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Transaction</span>

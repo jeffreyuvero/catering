@@ -8,6 +8,10 @@ class Base extends CI_controller{
 		//library
 		$this->load->library('session');
 		$this->load->library('session_checker');
+
+		// model 
+		$this->load->model('user_model');
+		$this->load->model('transaction_model');
 	}
 
 	public function index(){
@@ -22,15 +26,21 @@ class Base extends CI_controller{
 			redirect('/login','refresh');
 		}
 
+		$user_datails = $this->user_model->get_user($user_id); 
+		$transaction_record = $this->transaction_model->get_transactions_user($user_id);
+
 		$data = array(
 			'base_url' => base_url(),
 			'site_url' => site_url(),
 			'title' => 'Catering Online', 
 			'group_type' => $group_type, 
+			'user_details' => $user_datails, 
+			'transaction_records' => $transaction_record,
 		);
+
 		$this->load->view('base/include/header',$data);
 		$this->load->view('base/include/menu',$data);
-		$this->load->view('base/sample');
+		$this->load->view('base/dashboard',$data);
 		$this->load->view('base/include/footer',$data);
 	}
 
