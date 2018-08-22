@@ -13,7 +13,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="<?php echo $site_url ?>/transaction_list">
           <i class="fas fa-fw fa-table"></i>
           <span>Transaction List</span></a>
       </li>
