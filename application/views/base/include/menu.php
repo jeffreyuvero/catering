@@ -44,7 +44,7 @@
       }
     ?>
     <li class="nav-item">
-      <a class="nav-link" href="charts.html">
+      <a class="nav-link" href="<?php echo $site_url ?>/account_settings">
         <i class="fas fa-fw fa-chart-area"></i>
         <span>Account Settings</span></a>
     </li>

@@ -113,6 +113,45 @@ $(document).ready(function(){
 		});
 	});
 
+
+	$('.btn-update').click(function(){
+
+		var fname = $('#firstName').val();
+		var lname = $('#lastName').val();
+		var email = $('#inputEmail').val();
+		var password = $('#inputPassword').val();
+		var cpass = $('#confirmPassword').val();
+		
+
+		if((!password) || (!cpass)){
+			alert('Password is required, if you dont want to change password input your currunt password');
+		}else if(password != cpass){
+			alert('Please select an date');
+		}else {
+			$.ajax({
+				url: site_url + '/account_settings/update',
+				data: {
+					fname: fname,
+					lname:lname,
+					email: email,
+					password:password,
+					cpass: cpass,
+				},
+				dataType: 'json',
+				method: 'POST',
+				success:function(data) {
+				   if(data.success)
+				    {
+				        alert('Information successfully saved');
+				        // window.location = site_url + '/order_summary'; 
+				    }
+				},error:function(data){
+					alert('error');
+				}
+			});
+		}
+	});
+
 	
 
 	
