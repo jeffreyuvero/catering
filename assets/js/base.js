@@ -105,7 +105,7 @@ $(document).ready(function(){
 			   if(data.success)
 			    {
 			        alert('transaction success saved');
-			        // window.location = site_url ; 
+			        window.location = site_url ; 
 			    }
 			},error:function(data){
 				alert('error');
