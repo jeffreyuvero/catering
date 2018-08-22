@@ -9,6 +9,7 @@ class Billing_statement extends CI_controller{
 
 		// model
 		$this->load->model('transaction_model');
+		$this->load->model('user_model');
 	}
 
 	public function index(){
@@ -97,8 +98,14 @@ class Billing_statement extends CI_controller{
 		$transaction_date = date('Y-m-d');
 
 		$add = $this->transaction_model->add_record($transaction_id,$total_amount,$transaction_date);
+		$confirmed = 1;
 
 		if($add){
+			$user = $this->user_model->get_user($user_id); // check first if the user is already confirmed. 
+			if($user['status'] == 0){
+				$is_update = $this->transaction_model->update_status($user_id,$confirmed);
+			}
+			
 			$alert = array('success' => 1); 
 	        echo json_encode($alert);
 		}

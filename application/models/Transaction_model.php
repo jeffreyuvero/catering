@@ -103,4 +103,11 @@ class Transaction_model extends CI_model{
 		$query = $this->db->get();
 		return $query->result_array();
 	}
+
+	public function update_status($user_id,$confirmed){
+		$this->db->where('id',$user_id);
+		$this->db->set('status',$confirmed);
+		$this->db->update('user');
+		return $this->db->affected_rows(); 
+	}
 }
