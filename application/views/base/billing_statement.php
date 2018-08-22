@@ -153,7 +153,7 @@
                   <div class="container">
                       <div class="row">
                           <div class="col-sm-6">
-                              <button class="btn btn-primary btn-proceed-package">
+                              <button class="btn btn-primary btn-proceed-bill_statement">
                                 Proceed
                               </button>
                           </div>

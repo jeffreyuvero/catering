@@ -84,7 +84,14 @@ class Transaction_model extends CI_model{
 		return $query->row_array();
 	}
 
-	public function get_billing(){
-	
+	public function add_record($transaction_id,$total_amount,$transaction_date){
+		$records = array(
+			'idtrans' => $transaction_id,
+			'total_amount' => $total_amount,
+			'transaction_date' => $transaction_date,
+		); 
+
+		$this->db->insert('records',$records);
+		return $this->db->affected_rows();
 	}
 }

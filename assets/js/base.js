@@ -93,5 +93,27 @@ $(document).ready(function(){
 		window.location = site_url + '/billing_statement';
 	});
 
+
+	$('.btn-proceed-bill_statement').click(function(){
+		$.ajax({
+			url: site_url + '/billing_statement/add_record',
+			data: {
+			},
+			dataType: 'json',
+			method: 'POST',
+			success:function(data) {
+			   if(data.success)
+			    {
+			        alert('transaction success saved');
+			        // window.location = site_url ; 
+			    }
+			},error:function(data){
+				alert('error');
+			}
+		});
+	});
+
+	
+
 	
 });
