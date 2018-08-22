@@ -6,6 +6,8 @@ class Login extends CI_controller{
 
 		//model 
 		$this->load->model('login_model');
+		$this->load->model('user_model');
+		
 		$this->load->library('session_checker');
 	}
 
@@ -86,10 +88,23 @@ class Login extends CI_controller{
 		$login_in_result = $this->login_model->login($inputEmail,$inputPassword);
 		if($login_in_result){
 			$user_group_ids = $this->login_model->get_user_grp($inputEmail); // this is the model for getting group id
-
 			$this->session->set_userdata('group_type',$user_group_ids['group_id']); // group type passed to session
 			$this->session->set_userdata('user_id',$user_group_ids['user_id']); // user_id passed to session
-			redirect($site_url . '/base');
+
+			$user_details = $this->user_model->get_user($user_group_ids['user_id']);
+
+			if($user_details['status'] == 0){
+				$reg_date = new DateTime ($user_details['date_register']);
+				$now = new DateTime();
+				$deadline_remaining = date_diff($reg_date,$now);
+				if($deadline_remaining->format('%d') > 3 ){
+					$this->session->unset_userdata('group_type'); 
+					$this->session->unset_userdata('user_id');
+					echo 'Your account is expired' ;
+				}
+			}else{
+				redirect($site_url . '/base');
+			}
 			
 		}else{
 			echo 'Your Email address and Password is incorrect' ;
