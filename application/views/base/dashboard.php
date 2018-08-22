@@ -1,12 +1,12 @@
 <div id="content-wrapper">
     <div class="container-fluid">
     <!-- Breadcrumbs-->
-      <ol class="breadcrumb">
+<!--       <ol class="breadcrumb">
         <li class="breadcrumb-item">
             <a href="index.html">Dashboard</a>
         </li>
         <!-- <li class="breadcrumb-item active"></li> -->
-      </ol>
+      </ol> -->
 
     <!-- Page Content -->
       <div class="container">
