@@ -40,7 +40,7 @@
                            <span class="add-on"><i class="icon-th"></i></span>
                          </div> -->
 
-                        <input type="text" id="datepicker">
+                        <input type="text" id="datepicker" placeholder="yyyy-mm-dd">
                        <!--   <div class="docs-datepicker">
                           <div class="input-group">
                             <input type="text" class="form-control docs-date" name="date" placeholder="Pick a date">
