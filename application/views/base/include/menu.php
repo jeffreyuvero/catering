@@ -5,17 +5,19 @@
     <?php 
       if ($group_type != 4) {
     ?>
-      <li class="nav-item">
-        <a class="nav-link" href="index.html">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>File Maintenance</span>
-        </a>
-      </li>
 
       <li class="nav-item">
         <a class="nav-link" href="<?php echo $site_url ?>/transaction_list">
           <i class="fas fa-fw fa-table"></i>
           <span>Transaction List</span></a>
+      </li>
+
+
+      <li class="nav-item">
+        <a class="nav-link"  href="<?php echo $site_url ?>/file_maintenance">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>File Maintenance</span>
+        </a>
       </li>
 
       <li class="nav-item">
