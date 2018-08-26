@@ -48,7 +48,8 @@
 
     <!-- Custom / Personal JS -->
     <script src="<?php echo $base_url ?>assets/js/dishes.js" type="text/javascript"></script>
-     <script src="<?php echo $base_url ?>assets/js/services.js" type="text/javascript"></script>
+    <script src="<?php echo $base_url ?>assets/js/services.js" type="text/javascript"></script>
+    <script src="<?php echo $base_url ?>assets/js/addons.js" type="text/javascript"></script>
     <script src="<?php echo $base_url ?>assets/js/base.js" type="text/javascript"></script>
 
 
