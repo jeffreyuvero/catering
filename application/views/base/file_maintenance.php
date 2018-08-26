@@ -79,6 +79,55 @@
       </div>
     </div>
 
+    <br>
+    <div class="row">
+      <div class="col-sm-3">
+      </div>
+
+      <div class="col-sm-3">
+          <div class="card text-white bg-dark o-hidden h-100">
+            <div class="card-body">
+              <div class="card-body-icon">
+                <i class="fas fa-fw fa-list"></i>
+              </div>
+              <div class="mr-5">
+                <h4>Events</h4>
+              </div>
+            </div>
+            <a class="card-footer text-white clearfix small z-1" href="<?php echo $site_url ?>/dishes">
+              <span class="float-left">View Details</span>
+              <span class="float-right">
+                <i class="fas fa-angle-right"></i>
+              </span>
+            </a>
+          </div>
+      </div>
+
+      
+      <div class="col-sm-3">
+          <div class="card text-white bg-danger o-hidden h-100">
+            <div class="card-body">
+              <div class="card-body-icon">
+                <i class="fas fa-fw fa-list"></i>
+              </div>
+              <div class="mr-5">
+                <h4>Package</h4>
+              </div>
+            </div>
+            <a class="card-footer text-white clearfix small z-1 btn-catering" >
+              <span class="float-left">View Details</span>
+              <span class="float-right">
+                <i class="fas fa-angle-right"></i>
+              </span>
+            </a>
+          </div>  
+      </div>
+
+
+      <div class="col-sm-3">
+      </div>
+    </div>
+
   </div>
   <!-- /.container-fluid -->
 
