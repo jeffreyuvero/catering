@@ -46,7 +46,7 @@
                 <h4>Services</h4>
               </div>
             </div>
-            <a class="card-footer text-white clearfix small z-1 btn-catering" >
+            <a class="card-footer text-white clearfix small z-1" href="<?php echo $site_url ?>/services"> >
               <span class="float-left">View Details</span>
               <span class="float-right">
                 <i class="fas fa-angle-right"></i>
