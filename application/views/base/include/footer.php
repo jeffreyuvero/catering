@@ -45,7 +45,12 @@
     <!-- Demo scripts for this page-->
     <script src="<?php echo $base_url ?>assets/js/datatables-demo.js"></script>
 
-     <script src="<?php echo $base_url ?>assets/js/base.js" type="text/javascript"></script>
+
+    <!-- Custom / Personal JS -->
+    <script src="<?php echo $base_url ?>assets/js/dishes.js" type="text/javascript"></script>
+    <script src="<?php echo $base_url ?>assets/js/base.js" type="text/javascript"></script>
+
+
     <script src="<?php echo $base_url ?>assets/js/bootstrap-datepicker.js" type="text/javascript"></script>
     <script src="<?php echo $base_url ?>assets/js/bootstrap-datepicker.js"></script>
 

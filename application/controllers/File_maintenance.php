@@ -44,7 +44,5 @@ class File_maintenance extends CI_controller{
 
 	}
 
-	public function view(){
-		die('asd');
-	}
+	
 }
