@@ -6,7 +6,7 @@
         list of Events</div>
         <div class="col-md-4">
           <br>
-          <button class="btn btn-primary events_add">Add</button>
+          <button class="btn btn-primary events_add-events">Add</button>
         </div>
       <div class="card-body">
         <div class="table-responsive">
@@ -27,8 +27,8 @@
                     <td><?php echo ucfirst($event['name']) ?></td>
                     <td><?php echo ucfirst($event['description']) ?></td>
                     <td>
-                      <button class="btn btn-success btn-edit" data-id="<?php echo $event['id'] ?>">Edit</button>
-                      <button class="btn btn-danger btn-delete" data-id="<?php echo $event['id'] ?>">Delete</button>
+                      <button class="btn btn-success btn-edit-events" data-id="<?php echo $event['id'] ?>">Edit</button>
+                      <button class="btn btn-danger btn-delete-events" data-id="<?php echo $event['id'] ?>">Delete</button>
                     </td>
                   </tr>
               <?php } ?>

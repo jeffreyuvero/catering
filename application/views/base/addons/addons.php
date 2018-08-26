@@ -6,7 +6,7 @@
         list of Addons</div>
         <div class="col-md-4">
           <br>
-          <button class="btn btn-primary addons_add">Add</button>
+          <button class="btn btn-primary addons_add-addons">Add</button>
         </div>
       <div class="card-body">
         <div class="table-responsive">
@@ -27,8 +27,8 @@
                     <td><?php echo ucfirst($addon['addons_list']) ?></td>
                     <td><?php echo ucfirst($addon['price']) ?></td>
                     <td>
-                      <button class="btn btn-success btn-edit" data-id="<?php echo $addon['id'] ?>">Edit</button>
-                      <button class="btn btn-danger btn-delete" data-id="<?php echo $addon['id'] ?>">Delete</button>
+                      <button class="btn btn-success btn-edit-addons" data-id="<?php echo $addon['id'] ?>">Edit</button>
+                      <button class="btn btn-danger btn-delete-addons" data-id="<?php echo $addon['id'] ?>">Delete</button>
                     </td>
                   </tr>
               <?php } ?>

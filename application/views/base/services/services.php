@@ -6,7 +6,7 @@
         list of Services</div>
         <div class="col-md-4">
           <br>
-          <button class="btn btn-primary services_add">Add</button>
+          <button class="btn btn-primary services_add-services">Add</button>
         </div>
       <div class="card-body">
         <div class="table-responsive">
@@ -27,8 +27,8 @@
                     <td><?php echo ucfirst($service['name']) ?></td>
                     <td><?php echo ucfirst($service['price']) ?></td>
                     <td>
-                      <button class="btn btn-success btn-edit" data-id="<?php echo $service['id'] ?>">Edit</button>
-                      <button class="btn btn-danger btn-delete" data-id="<?php echo $service['id'] ?>">Delete</button>
+                      <button class="btn btn-success btn-edit-services" data-id="<?php echo $service['id'] ?>">Edit</button>
+                      <button class="btn btn-danger btn-delete-services" data-id="<?php echo $service['id'] ?>">Delete</button>
                     </td>
                   </tr>
               <?php } ?>

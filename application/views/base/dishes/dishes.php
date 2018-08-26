@@ -6,7 +6,7 @@
         list of Dishes</div>
         <div class="col-md-4">
           <br>
-          <button class="btn btn-primary dishes_add">Add</button>
+          <button class="btn btn-primary dishes_add-dishes">Add</button>
         </div>
       <div class="card-body">
         <div class="table-responsive">
@@ -29,8 +29,8 @@
                     <td><?php echo ucfirst($dish['description']) ?></td>
                     <td><?php echo ucfirst($dish['price']) ?></td>
                     <td>
-                      <button class="btn btn-success btn-edit" data-id="<?php echo $dish['id'] ?>">Edit</button>
-                      <button class="btn btn-danger btn-delete" data-id="<?php echo $dish['id'] ?>">Delete</button>
+                      <button class="btn btn-success btn-edit-dishes" data-id="<?php echo $dish['id'] ?>">Edit</button>
+                      <button class="btn btn-danger btn-delete-dishes" data-id="<?php echo $dish['id'] ?>">Delete</button>
                     </td>
                   </tr>
               <?php } ?>

@@ -156,7 +156,7 @@ class Addons extends CI_controller{
 		}
 	}
 
-	public function delete($service_id){
+	public function delete($addons_id){
 		$name = $this->input->post('name');
 		// $description = $this->input->post('description');
 		$price = $this->input->post('price');
@@ -174,12 +174,12 @@ class Addons extends CI_controller{
 			redirect('login');
 		}
 		
-		$is_deleted = $this->services_model->delete_service($service_id);
+		$is_deleted = $this->addons_model->delete_addons($addons_id);
 
 		if ($is_deleted) {
 			// $alert = array('success' => 1); 
 	  //       echo json_encode($alert);
-			redirect('services','refresh');
+			redirect('addons','refresh');
 		}
 	}
 
