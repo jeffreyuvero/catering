@@ -28,8 +28,11 @@
       <div class="card card-login mx-auto mt-5">
         <div class="card-header">Login</div>
         <div class="card-body">
+          <img src="http://localhost/catering/assets/logo.jpeg" height="250" width="350px">
           <!-- <form> -->
             <?php echo form_open('login/login'); ?>
+            
+            <br>
             <div class="form-group">
               <div class="form-label-group">
                 <input type="email" id="inputEmail" name="inputEmail"class="form-control" placeholder="Email address or username" required="required" autofocus="autofocus">
