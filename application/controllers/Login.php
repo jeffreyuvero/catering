@@ -93,6 +93,7 @@ class Login extends CI_controller{
 
 			$user_details = $this->user_model->get_user($user_group_ids['user_id']);
 
+
 			if($user_details['status'] == 0){
 				$reg_date = new DateTime ($user_details['date_register']);
 				$now = new DateTime();
@@ -103,7 +104,11 @@ class Login extends CI_controller{
 					echo 'Your account is expired' ;
 				}
 			}else{
-				redirect($site_url . '/base');
+				if($user_group_ids['group_id'] == 4){
+					redirect($site_url . '/base');
+				}else{
+					redirect($site_url . '/transaction_list');
+				}
 			}
 			
 		}else{
