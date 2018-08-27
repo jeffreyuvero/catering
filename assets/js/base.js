@@ -77,10 +77,13 @@ $(document).ready(function(){
 				dataType: 'json',
 				method: 'POST',
 				success:function(data) {
-				   if(data.success)
+				   if(data.success == 1)
 				    {
 				        alert('transaction success saved');
 				        window.location = site_url + '/order_summary'; 
+				    }else{
+				    	alert('Date must be schedule 3 days before the date choices.');
+				        // window.location = site_url + '/order_summary'; 
 				    }
 				},error:function(data){
 					alert('error');
@@ -151,8 +154,4 @@ $(document).ready(function(){
 			});
 		}
 	});
-
-	
-
-	
 });
