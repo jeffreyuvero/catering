@@ -13,7 +13,6 @@ class Events extends CI_controller{
 	}
 
 	public function index(){
-
 		$user_id = $this->session->userdata('user_id');
 		$group_type = $this->session->userdata('group_type');
 		$this->session->unset_userdata('transaction_id');
@@ -28,8 +27,7 @@ class Events extends CI_controller{
 		}
 			
 		$events = $this->events_model->get_events_list();
-
-
+		
 		$data = array(
 			'base_url' => base_url(),
 			'site_url' => site_url(),

@@ -70,40 +70,34 @@
 
       <div class="row">
         <div class="col-sm-2"> </div>
- 
-       <div class="col-sm-4">
-          <div class="card border-light mb-3 style="max-width: 18rem;">
-            <div class="card-header">
-                <h4>
-                  <i>Package A</i>
-                </h4>
-            </div>
-            <div class="card-body">
-              <div class="container">
-                <!-- <div class="card-title">
-                  <h4><i>Appetizer</i></h4>
-                </div> -->
-                <ul>
-                  <li><p>Crabmeat Soup</p></li>
-                  <li><p>Pancit Canton</p></li>
-                  <li><p>Chicken and Lemon Sauce</p></li>
-                  <li><p>Fish Fillet with Garlic</p></li>
-                  <li><p>Sweet and Sour Pork</p></li>
-                  <li><p>Fried Beancurd Salt and Pepper</p></li>
-                  <li><p>Buchi</p></li>
-                  <li><p>Steam Rice</p></li>
-                  <li><p>Ice Tea </p></li>
-                </ul>
-                <div class="form-check">
-                  <input type="radio" class="form-check-input" value = "1" name="rdoPackage">
-                  Click here to select the package
+       <?php foreach ($packages as $key => $package) { ?>
+           <div class="col-sm-4">
+              <div class="card border-light mb-3 style="max-width: 18rem;">
+                <div class="card-header">
+                    <h4>
+                      <i> <?php echo ucfirst($package['package']);  ?></i>
+                    </h4>
                 </div>
+                <div class="card-body">
+                  <div class="container">
+                    <ul>
+                        
+                      <?php foreach ($lists as $key => $list) { ?>
+                          <?php foreach ($list as $key => $_list) { ?>
+                              <li><p><?php echo ucfirst($_list['name']);  ?></p></li>
+                          <?php } ?>
+                      <?php } ?>
+                    </ul>
+                    <div class="form-check">
+                      <input type="radio" class="form-check-input" value = " <?php echo ucfirst($package['id']);  ?>" name="rdoPackage">
+                      Click here to select the package
+                    </div>
+                  </div>
+                </div>  
               </div>
-            </div>  
-          </div>
-        </div>
-
-        <div class="col-sm-4">
+            </div>
+       <?php } ?>
+<!--         <div class="col-sm-4">
           <div class="card border-light mb-3 style="max-width: 18rem;">
             <div class="card-header">
                 <h4>
@@ -112,9 +106,6 @@
             </div>
             <div class="card-body">
               <div class="container">
-                <!-- <div class="card-title">
-                  <h4><i>Appetizer</i></h4>
-                </div> -->
                 <ul>
                   <li><p>Hotatai Soup</p></li>
                   <li><p>Mixed Green Salad</p></li>
@@ -133,7 +124,7 @@
               </div>
             </div>  
           </div>
-        </div>
+        </div> -->
 
         <div class="col-sm-2"></div>
         <div class="col-sm-1"></div>

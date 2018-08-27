@@ -32,26 +32,14 @@
               <div class="container">
                   <div class="row">
                     <div class="col-sm-6">
-                      <div class="card-text">
-                          <div class="form-check">
-                            <input type="radio" class="form-check-input" value = "birthday" name="rdoEvents">
-                            Birthday
-                          </div>
-                      </div>
-
-                      <div class="card-text">
-                        <div class="form-check">
-                          <input type="radio" class="form-check-input" value = "wedding" name="rdoEvents">
-                          Wedding
+                      <?php foreach ($events as $key => $event) { ?>
+                        <div class="card-text">
+                            <div class="form-check">
+                              <input type="radio" class="form-check-input" value = "<?php echo $event['name']; ?>" name="rdoEvents">
+                              <?php echo ucfirst($event['name']); ?>
+                            </div>
                         </div>
-                      </div>
-
-                      <div class="card-text">
-                        <div class="form-check">
-                          <input type="radio" class="form-check-input" value = "christmass_party" name="rdoEvents"> 
-                          Christmass Party
-                        </div>
-                      </div>
+                       <?php  } ?>
                     </div>
                   </div>
               </div>
@@ -80,26 +68,14 @@
                 <h2>Add Ons</h2>
               </div>
               <hr />
-              <div class="card-text">
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" name="videoke" value="3">
-                    Videoke
+              <?php foreach ($addons as $key => $addon) {?>
+                  <div class="card-text">
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" name="<?php echo $addon['addons_list']; ?>" value="<?php echo $addon['id']; ?>">
+                        <?php echo ucfirst($addon['addons_list']); ?>
+                      </div>
                   </div>
-              </div>
-
-              <div class="card-text">
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" name="photobooth" value="1">
-                  Photobooth
-                </div>
-              </div>
-
-              <div class="card-text">
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" name="chairtable" value="2"> 
-                  Chair and Table
-                </div>
-              </div>
+               <?php   } ?>
             </div>  
           </div>
       </div>

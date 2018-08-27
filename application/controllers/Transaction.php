@@ -10,11 +10,13 @@ class Transaction extends CI_controller{
 
 		// model
 		$this->load->model('transaction_model');
+		$this->load->model('events_model');
+		$this->load->model('addons_model');
 	}
 
 	public function index(){
 		$user_id = $this->session->userdata('user_id');
-		$group_type = $this->session->userdata('group_type');
+		$group_type = $this->session->userdata('group_type')	;
 		$this->session->unset_userdata('transaction_id');
 
 		if // check if the sessions are expire
@@ -26,8 +28,7 @@ class Transaction extends CI_controller{
 			redirect('login');
 		}
 			
-		 
-
+	
 		$data = array(
 			'base_url' => base_url(),
 			'site_url' => site_url(),
@@ -54,12 +55,16 @@ class Transaction extends CI_controller{
 			redirect('login/login');
 		}
 			 
+		$events = $this->events_model->get_events_list();
+		$addons = $this->addons_model->get_addons_list();
 
 		$data = array(
 			'base_url' => base_url(),
 			'site_url' => site_url(),
 			'title' => 'Catering Online', 
 			'group_type' => $group_type, 
+			'events' => $events,
+			'addons' => $addons,
 		);
 		$this->load->view('base/include/header',$data);
 		$this->load->view('base/include/menu',$data);
