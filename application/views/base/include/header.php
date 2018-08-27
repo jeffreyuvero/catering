@@ -28,6 +28,11 @@
 
      <link rel="stylesheet" href="<?php echo $base_url ?>assets/css/datepicker/jquery-ui.css">
 
+
+    <link href="<?php echo $base_url ?>assets/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="<?php echo $base_url ?>assets/fontawesome/css/all.min.css" rel="stylesheet">
+
+
   </head>
 
     <body id="page-top">

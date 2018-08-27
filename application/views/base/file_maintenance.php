@@ -21,7 +21,7 @@
           <div class="card text-white bg-success o-hidden h-100">
             <div class="card-body">
               <div class="card-body-icon">
-                <i class="fas fa-fw fa-list"></i>
+                <i class="fas fa-fw fa-utensils"></i>
               </div>
               <div class="mr-5">
                 <h4>Dishes</h4>
@@ -40,7 +40,7 @@
           <div class="card text-white bg-warning o-hidden h-100">
             <div class="card-body">
               <div class="card-body-icon">
-                <i class="fas fa-fw fa-list"></i>
+                <i class="fas fa-fw fa-camera-retro"></i>
               </div>
               <div class="mr-5">
                 <h4>Services</h4>
@@ -59,7 +59,7 @@
           <div class="card text-white bg-primary o-hidden h-100" >
             <div class="card-body">
               <div class="card-body-icon">
-                <i class="fas fa-fw fa-list"></i>
+                <i class="fas fa-fw fa-plus"></i>
               </div>
               <div class="mr-5">
                 <h4>Add ons</h4>
@@ -88,7 +88,7 @@
           <div class="card text-white bg-dark o-hidden h-100">
             <div class="card-body">
               <div class="card-body-icon">
-                <i class="fas fa-fw fa-list"></i>
+                <i class="fas fa-fw fa-calendar-alt"></i>
               </div>
               <div class="mr-5">
                 <h4>Events</h4>
@@ -108,7 +108,7 @@
           <div class="card text-white bg-danger o-hidden h-100">
             <div class="card-body">
               <div class="card-body-icon">
-                <i class="fas fa-fw fa-list"></i>
+                <i class="fas fa-fw fa-archive"></i>
               </div>
               <div class="mr-5">
                 <h4>Package</h4>

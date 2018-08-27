@@ -19,6 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="<?php echo $base_url ?>assets/css/sb-admin.css" rel="stylesheet">
+    <link href="<?php echo $base_url ?>assets/fontawesome/css/fontawesome.min" rel="stylesheet">
 
   </head>
 
@@ -26,12 +27,12 @@
 
     <div class="container">
       <div class="card card-login mx-auto mt-5">
-        <div class="card-header">Login</div>
+        <div class="card-header">Trats Catering Services and Events Planning</div>
         <div class="card-body">
           <img src="http://localhost/catering/assets/logo.jpeg" height="250" width="350px">
           <!-- <form> -->
             <?php echo form_open('login/login'); ?>
-            
+
             <br>
             <div class="form-group">
               <div class="form-label-group">

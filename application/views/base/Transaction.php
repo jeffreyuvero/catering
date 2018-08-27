@@ -21,7 +21,7 @@
           <div class="card text-white bg-success o-hidden h-100">
             <div class="card-body">
               <div class="card-body-icon">
-                <i class="fas fa-fw fa-list"></i>
+                <i class="fas fa-fw fa-calendar"></i>
               </div>
               <div class="mr-5">
                 <h4>Events</h4>
@@ -40,11 +40,11 @@
           <div class="card text-white bg-warning o-hidden h-100">
             <div class="card-body">
               <div class="card-body-icon">
-                <i class="fas fa-fw fa-list"></i>
+                <i class="fas fa-fw fa-utensils"></i>
               </div>
               <div class="mr-5">
                 <h4>Catering</h4>
-              </div>a
+              </div>
             </div>
             <a class="card-footer text-white clearfix small z-1 btn-catering" >
               <span class="float-left">View Details</span>
