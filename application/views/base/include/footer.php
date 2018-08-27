@@ -51,7 +51,8 @@
     <script src="<?php echo $base_url ?>assets/js/services.js" type="text/javascript"></script>
     <script src="<?php echo $base_url ?>assets/js/addons.js" type="text/javascript"></script>
     <script src="<?php echo $base_url ?>assets/js/base.js" type="text/javascript"></script>
-    <script src="<?php echo $base_url ?>assets/js/events.js" type="text/javascript"></script>
+    <script src="<?php echo $base_url ?>assets/js/package_list.js" type="text/javascript"></script>
+     <script src="<?php echo $base_url ?>assets/js/events.js" type="text/javascript"></script>
 
 
     <script src="<?php echo $base_url ?>assets/js/bootstrap-datepicker.js" type="text/javascript"></script>
